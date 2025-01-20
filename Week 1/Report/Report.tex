@@ -1,0 +1,54 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\doublespacing
+
+\title{Week 1: Data Cleaning and Feature Engineering Report}
+\author{Pranav Verma}
+\date{January 20, 2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Introduction}
+The dataset used in this project contains information related to opportunities, learner signups, and related attributes. The primary objective of this phase was to clean the dataset by handling missing values, removing duplicates, and standardizing formats. Additionally, new features were engineered to facilitate further analysis.
+
+\section*{2. Data Cleaning Process}
+
+\begin{itemize}
+\item \textbf{Handled Missing Values}: Removed rows with missing critical fields such as \textit{Date of Birth}, \textit{Learner SignUp DateTime}, \textit{Opportunity Start Date}, and \textit{Opportunity End Date}.
+\item \textbf{Removed Duplicates}: Eliminated redundant records to ensure data uniqueness and accuracy.
+\item \textbf{Standardized Fields}:
+\begin{itemize}
+\item Normalized city and major names for consistency.
+\item Standardized date columns to a uniform datetime format.
+\end{itemize}
+\item \textbf{Corrected Formatting Issues}:
+\begin{itemize}
+\item Trimmed and capitalized text fields such as \textit{Current/Intended Major} and \textit{Country}.
+\end{itemize}
+\end{itemize}
+
+\section*{3. Feature Engineering}
+
+New features were derived to enrich the dataset:
+
+\begin{itemize}
+\item \textbf{Age}: Computed based on \textit{Date of Birth}.
+\item \textbf{Opportunity Duration}: Measured the number of days between \textit{Opportunity Start Date} and \textit{Opportunity End Date}.
+\item \textbf{Signup Month}: Extracted the month from \textit{Learner SignUp DateTime}.
+\end{itemize}
+
+\section*{4. Data Validation}
+
+\begin{itemize}
+\item \textbf{Missing Values}: Confirmed no missing values in critical fields after cleaning.
+\item \textbf{Date Formats}: Verified consistency across all date columns.
+\item \textbf{Outliers}: Checked for and resolved any irregularities in numeric or date-based fields.
+\end{itemize}
+
+
+\end{document}
